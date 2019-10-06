@@ -26,7 +26,6 @@ use pocketmine\event\entity\EntityDamageEvent;
 use pocketmine\event\player\PlayerMoveEvent;
 use pocketmine\command\Command;
 use pocketmine\level\Level;
-use pocketmine\scheduler\CallbackTask;
 use pocketmine\scheduler\Task;
 use pocketmine\command\CommandSender;
 use pocketmine\Player;
@@ -39,10 +38,6 @@ public $pvp;
     public $globalmute = false;
     public $spam = [];
    public function onEnable() {
-    $this->getServer()->getPluginManager()->registerEvents($this, $this);
-    		$this->getScheduler()->scheduleRepeatingTask(new CallbackTask(array($this, "Cord")), 0);
-    		$this->getScheduler()->scheduleRepeatingTask(new CallbackTask(array($this, "Alive")), 20 * 60);
-    		$this->getScheduler()->scheduleRepeatingTask(new CallbackTask(array($this, "msg")), 20 * 120);
     $this->pvp = FALSE;
    }
 	public function Cord(){
