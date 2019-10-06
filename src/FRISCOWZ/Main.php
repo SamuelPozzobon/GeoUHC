@@ -110,7 +110,7 @@ $name = $player->getName();
 $this->getServer()->broadcastPopup("§a[GeoUHC] §4- ".$event->getPlayer()->getName()." left.");
 $event->setQuitMessage("");
 }
-public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args) : bool{
+public function onCommand(CommandSender $sender, Command $cmd, $label, array $args) : bool{
 
 	$cmd = strtolower($cmd->getName());
 $players = $sender->getName();
